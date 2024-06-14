@@ -3,24 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "watch": "npm-run-all --parallel watch:next watch:codegen",
+    "watch:next": "next dev -p 3001",
+    "watch:codegen": "npx graphql-codegen --watch",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
+    "@urql/next": "^1.1.1",
+    "graphql": "^16.8.2",
+    "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "urql": "^4.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.0",
+    "@parcel/watcher": "^2.4.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   }
 }
