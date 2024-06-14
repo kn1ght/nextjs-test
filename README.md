@@ -1,12 +1,5 @@
-# To run the payload project:
-
-- `cd payload`
-- `docker-compose up` (docker should be installed)
-- open `http://localhost:3000/admin` and create new admin user, then create articles
-
 # To run the next.js project (first you should start payload project):
 
-- `cd web`
 - `npm i`
 - `npm run watch` (for dev mode) or `npm run build` and `npm run start` (for prod mode)
 - open `http://localhost:3001`
